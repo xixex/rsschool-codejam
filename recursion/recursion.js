@@ -1,4 +1,4 @@
-function reverse(tree) {
+function recursion(tree) {
     const array = [];
 
     function traverse(currentNode, level = 0) {
@@ -15,6 +15,6 @@ function reverse(tree) {
 
     traverse(tree);
     return array;
-
 }
+module.exports = recursion;
 
