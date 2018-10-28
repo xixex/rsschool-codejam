@@ -36,3 +36,4 @@ function make(...args) {
     return f;
 }
 
+module.exports = make;
