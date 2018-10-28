@@ -3,7 +3,7 @@ function make(...args) {
     let currentResult = decider(args) || 0;
 
     function f(...args2) {
-        currentResult = decider(args2) ;
+        currentResult = decider(args2);
         return f;
     }
 
@@ -15,7 +15,7 @@ function make(...args) {
         for (let i = 0; i < args.length; i++) {
             if (isFunc(args[i])) {
                 let result = values.reduce((accumulator, a) => args[i](accumulator, a));
-                values.splice(0,values.length,result);
+                values.splice(0, values.length, result);
                 return result;
             } else {
                 values.push(args[i]);
